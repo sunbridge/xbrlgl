@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>XBRL GL Instance viewer</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+		<style>
+			body {
+				color: #000;
+				font-family: Monospace;
+				font-size: 13px;
+				text-align: left;
+				font-weight: bold;
+				background-color: #fff;
+				margin: 20px;
+				overflow: auto;
+			}
+			a {
+				color: skyblue;
+			}
+		</style>
+		<script src="lib/jquery-1.10.2.min.js"></script>
+		<script src="xbrlgl.js"></script>
+	</head>
+	<body>
+		<h1 align='left'>XBRL GL Journal Entry Sample</h1>
+		<p>Original file location <a href="http://gl.iphix.net/files.htm" target="_blank">http://gl.iphix.net/files.htm</a></p>
+		<p>Copied file to this server </p><span id="message">location</span>
+		<p>
+			<form name="xbrl">
+				<select name="glselect" id="glselect" onchange="glLoad()">
+				<option value="">Select file ...</option>
+					<option value="ids/JournalEntry_Annotated_Instance.xml">Journal Entry</option>
+					<option value="ids/Customer_Invoices.xml">Customer Invoices</option>
+					<option value="ids/Vendor_Invoices.xml">Accounts Payable/Vendor Management Invoices</option>
+					<!--<option value="ids/Vendor_Invoices_Normalized.xml">Accounts Payable/Vendor Management Invoices Normalized</option>
+					-->
+					<option value="ids/BP_FixedAssetList.xml">Fixed Asset List</option>
+					<option value="ids/JournalEntry_Annotated_Book-Tax.xml">Book Tax</option>
+					
+				</select>
+			</form>
+		</p>
+		<div id="trace"></div>
+		<p>by <a href="http://www.sambuichi.jp" target="blank">SAMBUICHI Professional Engineer's Office</a></p>
+		<p>This page is generaed with <a href="http://jquery.com/" target="_blank">jQuery</a></p>
+	</body>
+</html>
