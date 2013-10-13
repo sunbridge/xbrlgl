@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>XBRL GL Instance viewer</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+<link rel="stylesheet" href="css/xbrlgl.css" />
+<style type="text/css">
+	#jQ {
+		margin: 4px;
+		width: 100%;
+	}
+	#jQajax {
+		margin: 0px;
+		padding: 0px;
+		width: 100%;
+		height: 100%;
+	}
+</style>
+<script src="lib/jquery-1.10.2.min.js"></script>
+<script>
+    $(function() {
+        $('#jQbutton').on("click",
+	        function() {
+			    $periodList = $("select#period");
+			    $period = $("option:selected", $periodList).val();
+			    $accountList = $("select#account");
+			    $account = $("option:selected", $accountList).val();
+	            $.ajax({
+	                url : 'glList.php',
+	                data : {
+	                    period : $period,
+	                    account : $account
+	                },
+	                success : function(data) {
+	                    $('#jQajax').html(data);
+	                },
+	                error : function(data) {
+	                    $('#jQtextStatus').text('エラー！');
+	                }
+	            });
+	        }
+        );
+    });
+</script>
+</head>
+<body>
+<div id="jQ">
+	<select name="period" id="period">
+		<option value="">Select period ...</option>
+		<option value="2009-04">2009-04</option>
+		<option value="2009-05">2009-05</option>
+		<option value="2009-06">2009-06</option>
+		<option value="2009-07">2009-07</option>
+		<option value="2009-08">2009-08</option>
+		<option value="2009-09">2009-09</option>
+		<option value="2009-10">2009-10</option>
+		<option value="2009-11">2009-11</option>
+		<option value="2009-12">2009-12</option>
+		<option value="2010-01">2010-01</option>
+		<option value="2010-02">2010-02</option>
+		<option value="2010-03">2010-03</option>
+	</select>
+	<select name="account" id="account">
+		<option value="">Select account ...</option>
+		<option value="111">現金</option>
+		<option value="121">当座預金</option>
+		<option value="131">普通預金</option>
+		<option value="148">定期積金</option>
+		<option value="150">受取手形</option>
+		<option value="152">売掛金</option>
+		<option value="183">短期貸付金</option>
+		<option value="191">仮払消費税等</option>
+		<option value="248">保険積立金</option>
+		<option value="301">支払手形</option>
+		<option value="312">買掛金</option>
+		<option value="321">短期借入金</option>
+		<option value="322">未払金</option>
+		<option value="326">預り金</option>
+		<option value="327">未払事業税等</option>
+		<option value="328">未払法人税等</option>
+		<option value="335">仮受消費税等</option>
+		<option value="336">未払消費税等</option>
+		<option value="341">長期借入金</option>
+		<option value="511">売上高</option>
+		<option value="521">売上値引戻り高</option>
+		<option value="541">商品仕入高</option>
+		<option value="551">仕入値引戻し高</option>
+		<option value="711">役員報酬</option>
+		<option value="712">給与手当</option>
+		<option value="713">賞与</option>
+		<option value="721">雑給</option>
+		<option value="723">法定福利費</option>
+		<option value="724">福利厚生費</option>
+		<option value="726">旅費交通費</option>
+		<option value="727">通信費</option>
+		<option value="728">業務委託費</option>
+		<option value="731">運賃</option>
+		<option value="732">広告宣伝費</option>
+		<option value="733">交際接待費</option>
+		<option value="734">会議費</option>
+		<option value="736">水道光熱費</option>
+		<option value="737">消耗品費</option>
+		<option value="738">租税公課</option>
+		<option value="739">新聞図書費</option>
+		<option value="740">車両費</option>
+		<option value="741">支払手数料</option>
+		<option value="742">諸会費</option>
+		<option value="744">リース料</option>
+		<option value="746">支払報酬</option>
+		<option value="747">地代家賃</option>
+		<option value="752">保険料</option>
+		<option value="753">修繕維持費</option>
+		<option value="754">事務用消耗品費</option>
+		<option value="791">雑費</option>
+		<option value="821">支払利息</option>
+	</select>
+    <button id="jQbutton"　style="font-size: x-large">検索</button>
+    <p>
+        <span id="jQtextStatus"></span>
+    </p>
+    <div id="jQajax"></div>
+	<p>
+		by <a href="http://www.sambuichi.jp" target="blank">SAMBUICHI Professional Engineer's Office</a>
+	</p>
+	<p>
+		This page is generaed with <a href="http://jquery.com/" target="_blank">jQuery</a>
+	</p>
+</div>
+</body>
+</html>
