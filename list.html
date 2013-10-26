@@ -22,23 +22,43 @@
     $(function() {
         $('#jQbutton').on("click",
 	        function() {
+			    $actionList = $("select#action");
+			    $action = $("option:selected", $actionList).val();
 			    $periodList = $("select#period");
 			    $period = $("option:selected", $periodList).val();
 			    $accountList = $("select#account");
 			    $account = $("option:selected", $accountList).val();
-	            $.ajax({
-	                url : 'glList.php',
-	                data : {
-	                    period : $period,
-	                    account : $account
-	                },
-	                success : function(data) {
-	                    $('#jQajax').html(data);
-	                },
-	                error : function(data) {
-	                    $('#jQtextStatus').text('エラー！');
-	                }
-	            });
+			    if ($action=='entry') {
+		            $.ajax({
+		                url : 'glList.php',
+		                data : {
+		                    period : $period,
+		                    account : $account
+		                },
+		                success : function(data) {
+		                    $('#jQajax').html(data);
+		                },
+		                error : function(data) {
+		                    $('#jQtextStatus').text('エラー！');
+		                }
+		            });
+			    }
+			    else if ($action=='journal' || $action=='calc') {
+		            $.ajax({
+		                url : 'xbrlgl.php',
+		                data : {
+		                    action : $action,
+		                    period : $period,
+		                    account : $account
+		                },
+		                success : function(data) {
+		                    $('#jQajax').html(data);
+		                },
+		                error : function(data) {
+		                    $('#jQtextStatus').text('エラー！');
+		                }
+		            });
+	           }
 	        }
         );
     });
@@ -46,6 +66,11 @@
 </head>
 <body>
 <div id="jQ">
+	<select name="action" id="action">
+		<option value="">Select option ...</option>
+		<option value="entry">entry</option>
+		<option value="calc">journal</option>
+	</select>
 	<select name="period" id="period">
 		<option value="">Select period ...</option>
 		<option value="2009-04">2009-04</option>
