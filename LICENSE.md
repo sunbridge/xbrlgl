@@ -1,34 +1,23 @@
-WuWei は、読書ノート作成ツールです。WuWei は、HTML5を使ってJavaScript (ブラウザ) で作成しています。読書ノートの情報を蓄積するためにクラウドサービスを使用しています。
-
-WuWeiは、三分一信之が著作権を持つソフトウエアです。
-
-Copyright (c) 2013-2016, Nobuyuki SAMBUICHI
+Copyright (c) 2016, sunbridge
 All rights reserved.
 
-あなたは、以下に定義する条件に基づいて、再配布および/または改変することができます。
+Redistribution and use in source and binary forms, with or without
+modification, are permitted provided that the following conditions are met:
 
-1. あなたは、本ソフトウエアの著作権表示および関連する免責条項のすべてを複製することを条件に、制限なく、ソフトウェアのソースを一字一句変えずに複製を作成し再配布してもよい。
+* Redistributions of source code must retain the above copyright notice, this
+  list of conditions and the following disclaimer.
 
-2. あなたは、次のうちすくなくとも一つを行う事を条件として、複製したソフトウエアをどのようにでも改変してもよい。
+* Redistributions in binary form must reproduce the above copyright notice,
+  this list of conditions and the following disclaimer in the documentation
+  and/or other materials provided with the distribution.
 
-a) あなたが改変したソフトウエアをパブリックドメインで公有する。または、それらをGitHubやそれに同等な情報媒体に投稿することで無償で提供する。または、あなたの改変を元のソフトウエアに含める事を著作者に許可する。
-
-b) 元のソフトウエアがどこから入手できるかの指示とともに改変したソフトウエアや改変した名前を提供する。
-
-c) 配布について著作者と個別に協議する。
-
-3. あなたは、次のうちすくなくとも一つを行う事を条件として、ソフトウエアを配布してもよい。
-
-a) （マニュアルのページやそれに相当する方法で）元のソフトウエアをどこから入手できるかの指示とともに改変したソフトウエアを配布する。
-
-b) 配布物に改変したソフトウエアの機械可読なソースを同梱する。
-
-c) 元のソフトウエアがどこから入手できるかの指示とともに改変したソフトウエアや改変した名前を提供する。
-
-d) 配布について著作者と個別に協議する。
-
-4. あなたは、本ソフトウエアを改変して他の（商用ソフトかもしれない）ソフトウエアの一部とする事ができる。しかし、本ソフトウエアの配布に含まれるいくつかのファイルは著作者が作成したものではないのでここに定義する条件下にはない。これらのファイルの一覧およびそれらの複製についての条件については、LEGALページを参照すること。
-
-5. 本ソフトウエアの入力として提供されたり出力として生成されるスクリプトおよびファイルは、自動的には本ソフトウエアの著作権下にはない。そうではなくて、それらの著作権は、作成した著作者に帰属する。そして、商品として販売されたり、本ソフトウエアと統合されているかもしれない。
-
-6. 本ソフトウェアは、明示的にも黙示的にもいかなる保証も行わないし、これらに限定されないが、次の条件を含んで、商品性および特定の目的に対する適合性の黙示的な保証を行う事なく、"現状有姿"で提供される。
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE
+FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
+SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER
+CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,
+OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
